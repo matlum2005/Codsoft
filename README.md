@@ -66,7 +66,6 @@ A comprehensive desktop application designed to manage student records with a pr
 
 ## 📬 Contact
 **GitHub**: [@matlum2005](https://github.com/matlum2005)  
-**Profile**: [Abdul Ahad](https://github.com/AbdulAhad0007)
 
 ---
 *Created as part of the Codsoft Internship Program.*
