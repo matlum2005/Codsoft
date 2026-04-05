@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Student Grade Calculator</h1>
+        
+        <div class="input-section">
+            <h2>Enter Marks (Out of 100)</h2>
+            <div id="subjects-container">
+                <div class="subject-row">
+                    <label>Subject 1:</label>
+                    <input type="number" class="mark-input" min="0" max="100" placeholder="Enter marks">
+                    <button type="button" class="remove-btn" style="display: none;">Remove</button>
+                </div>
+            </div>
+            <button id="add-subject">+ Add Subject</button>
+            <button id="calculate-btn">Calculate & Save</button>
+        </div>
+
+        <div id="result-section" class="result-section hidden">
+            <h2>📊 Your Result</h2>
+            <div class="result-display">
+                <p>Total Marks: <span id="total-marks">0</span></p>
+                <p>Average: <span id="percentage">0</span>%</p>
+                <p>Grade: <span id="grade">F</span></p>
+            </div>
+        </div>
+
+        <div id="history-section">
+            <h2>📋 Previous Results</h2>
+            <button id="refresh-history">Refresh History</button>
+            <table id="history-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Total Marks</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

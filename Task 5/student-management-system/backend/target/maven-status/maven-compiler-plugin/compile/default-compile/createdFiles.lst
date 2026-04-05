@@ -1,0 +1,6 @@
+com\studentmgmt\controller\StudentController.class
+com\studentmgmt\exception\GlobalExceptionHandler.class
+com\studentmgmt\StudentManagementApplication.class
+com\studentmgmt\entity\Student.class
+com\studentmgmt\repository\StudentRepository.class
+com\studentmgmt\service\StudentService.class

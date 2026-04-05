@@ -1,0 +1,6 @@
+com\studentmgmt\MainApp.class
+module-info.class
+com\studentmgmt\service\HttpService.class
+com\studentmgmt\controller\MainController.class
+com\studentmgmt\model\Student.class
+com\studentmgmt\controller\StudentDialogController.class

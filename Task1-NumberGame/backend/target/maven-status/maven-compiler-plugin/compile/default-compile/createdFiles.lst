@@ -1,0 +1,5 @@
+com\example\numbergame\model\GameScore.class
+com\example\numbergame\controller\GameController.class
+com\example\numbergame\NumberGameApplication.class
+com\example\numbergame\service\GameService.class
+com\example\numbergame\repository\GameScoreRepository.class

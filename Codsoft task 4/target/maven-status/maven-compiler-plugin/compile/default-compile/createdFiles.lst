@@ -1,0 +1,9 @@
+com\currencyconverter\service\FullCurrencyList.class
+com\currencyconverter\entity\ConversionHistory.class
+com\currencyconverter\controller\CurrencyController.class
+com\currencyconverter\dto\ConversionRequest.class
+com\currencyconverter\dto\ConversionResponse.class
+com\currencyconverter\dto\ExchangeRatesResponse.class
+com\currencyconverter\service\CurrencyService.class
+com\currencyconverter\repository\ConversionRepository.class
+com\currencyconverter\CurrencyConverterApplication.class

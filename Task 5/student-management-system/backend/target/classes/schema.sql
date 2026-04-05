@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS students (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    roll_number VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(255),
+    age INT CHECK (age >= 18)
+);

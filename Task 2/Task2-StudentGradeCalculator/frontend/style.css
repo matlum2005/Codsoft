@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.subject-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.subject-row label {
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.mark-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.mark-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.mark-input:invalid {
+    border-color: #ff4757;
+}
+
+.add-subject, .calculate-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+.add-subject:hover, .calculate-btn:hover {
+    background: #5a67d8;
+}
+
+.remove-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-btn:hover {
+    background: #ff3742;
+}
+
+.result-section {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.result-display p {
+    font-size: 1.3em;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+#history-section {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+#refresh-history {
+    background: #48bb78;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#refresh-history:hover {
+    background: #38a169;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #667eea;
+    color: white;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #f7fafc;
+}
+
+.error {
+    color: #ff4757;
+    background: #fed7d7;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.success {
+    color: #11998e;
+    background: #c6f6d5;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .subject-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}
+

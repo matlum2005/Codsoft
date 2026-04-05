@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💎 Premium Currency Converter</title>
+    <link rel="stylesheet" href="css/premium-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="container">
+        <div class="glass-card">
+            <h1>💎 Premium Converter</h1>
+            <p class="subtitle">Real-time rates • Lightning fast • Enterprise grade</p>
+
+            <form id="converterForm" class="converter-form">
+                <!-- Amount Input -->
+                <div class="input-group">
+                    <i class="fas fa-dollar-sign icon"></i>
+                    <input type="number" id="amount" class="premium-input" placeholder="Enter amount" min="0" step="0.01" required>
+                </div>
+
+                <!-- Live Rate Preview -->
+                <div id="liveRate" class="live-rate">
+                    1 USD = <span id="liveRateValue">1.08</span> EUR
+                </div>
+
+                <!-- Currency Selection -->
+                <div class="currency-row">
+                    <div class="currency-group">
+                        <label class="currency-label">From</label>
+                        <div class="custom-dropdown" id="fromDropdown">
+                            <div class="custom-select dropdown-trigger" id="fromTrigger">
+                                <span class="currency-symbol">USD $</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="dropdown-list" id="fromList">
+                                <input type="text" class="dropdown-search" placeholder="Search currency..." id="fromSearch">
+                                <!-- Options populated by JS -->
+                            </div>
+                        </div>
+                        <input type="hidden" id="baseCurrency" value="USD">
+                    </div>
+
+                    <button type="button" id="swapBtn" class="swap-btn" title="Swap currencies">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+
+                    <div class="currency-group">
+                        <label class="currency-label">To</label>
+                        <div class="custom-dropdown" id="toDropdown">
+                            <div class="custom-select dropdown-trigger" id="toTrigger">
+                                <span class="currency-symbol">EUR €</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="dropdown-list" id="toList">
+                                <input type="text" class="dropdown-search" placeholder="Search currency..." id="toSearch">
+                                <!-- Options populated by JS -->
+                            </div>
+                        </div>
+                        <input type="hidden" id="targetCurrency" value="EUR">
+                    </div>
+                </div>
+
+                <!-- Convert Button -->
+                <button type="submit" id="convertBtn" class="premium-btn">
+                    <span id="btnText">Convert Now</span>
+                    <div id="loadingSpinner" class="spinner hidden"></div>
+                </button>
+            </form>
+
+            <!-- Result Section -->
+            <div id="resultSection" class="result-section hidden">
+                <div class="result-display">
+                    <div class="result-row">
+                        <span class="result-label">Converted Amount:</span>
+                        <span id="convertedAmount" class="result-value">0</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Exchange Rate:</span>
+                        <span id="exchangeRate" class="result-value">1.0000</span>
+                    </div>
+                    <div class="success-message">
+                        ✅ Converted successfully!
+                    </div>
+                    <button id="historyBtn" class="premium-btn" style="margin-top: 1.5rem; font-size: 1rem;">
+                        View History <i class="fas fa-history"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message hidden"></div>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div id="historyModal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-btn" id="closeHistory">
+                <i class="fas fa-times"></i>
+            </button>
+            <h2 style="margin-bottom: 1.5rem;">Conversion History</h2>
+            <div id="historyList">No conversions yet...</div>
+        </div>
+    </div>
+
+    <script src="js/premium-script.js"></script>
+</body>
+</html>
+
